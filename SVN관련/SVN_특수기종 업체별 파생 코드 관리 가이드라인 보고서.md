@@ -74,17 +74,17 @@
 ht_org.c
 ```
 
-이 파일을 Samsung 업체 사양에 맞게 수정했다면, 변경된 파일은 다음과 같이 관리한다.
+이 파일을 ExampleCo 업체 사양에 맞게 수정했다면, 변경된 파일은 다음과 같이 관리한다.
 
 ```text
-ht_org_samsung.c
+ht_org_exampleco.c
 ```
 
 이렇게 하면 파일명만 보아도 다음 정보를 확인할 수 있다.
 
 * 기준이 된 원본 코드: `ht_org.c`
-* 적용 대상 업체: `Samsung`
-* 관리 목적: Samsung 사양에 맞게 변경된 파생 코드
+* 적용 대상 업체: `ExampleCo`
+* 관리 목적: ExampleCo 사양에 맞게 변경된 파생 코드
 
 ---
 
@@ -100,8 +100,8 @@ ht_org_samsung.c
 원본 파일:
 ht_org.c
 
-Samsung 업체 변경본:
-ht_org_samsung.c
+ExampleCo 업체 변경본:
+ht_org_exampleco.c
 ```
 
 다른 업체에 대해서도 동일한 규칙을 적용한다.
@@ -136,11 +136,11 @@ ht_org_woojin.c
 
 업체별 변경본을 실제 프로젝트에 적용할 때는 기존 빌드 대상 파일명과의 관계를 명확히 관리해야 한다.
 
-예를 들어 프로젝트에서 실제로 빌드되는 파일명이 `ht_org.c`라면, Samsung 업체용 변경본을 적용할 때 다음과 같이 처리한다.
+예를 들어 프로젝트에서 실제로 빌드되는 파일명이 `ht_org.c`라면, ExampleCo 업체용 변경본을 적용할 때 다음과 같이 처리한다.
 
 ```text
 1. 기존 ht_org.c를 ht_org_static.c로 변경
-2. ht_org_samsung.c를 ht_org.c로 변경
+2. ht_org_exampleco.c를 ht_org.c로 변경
 3. 변경된 ht_org.c를 기준으로 빌드 및 테스트 수행
 ```
 
@@ -148,7 +148,7 @@ ht_org_woojin.c
 
 ```text
 ht_org.c
-ht_org_samsung.c
+ht_org_exampleco.c
 ```
 
 적용 후:
@@ -174,7 +174,7 @@ ht_org.c
 
 ```text
 ht_org.c
-ht_org_samsung.c
+ht_org_exampleco.c
 ```
 
 ### 6.2 적용 시 보존 파일명
@@ -195,12 +195,12 @@ ht_org_static.c
 원본 기준 파일:
 ht_org.c
 
-Samsung 업체 변경본:
-ht_org_samsung.c
+ExampleCo 업체 변경본:
+ht_org_exampleco.c
 
-실제 Samsung 프로젝트 적용 시:
+실제 ExampleCo 프로젝트 적용 시:
 ht_org.c          → ht_org_static.c
-ht_org_samsung.c → ht_org.c
+ht_org_exampleco.c → ht_org.c
 ```
 
 ---
@@ -221,7 +221,7 @@ ht_org_samsung.c → ht_org.c
 
 그러나 업체별 변경본이 명확히 관리되면, 유지보수 담당자는 해당 업체 파일을 기준으로 빠르게 변경 내용을 확인할 수 있다.
 
-예를 들어 Samsung 관련 문제가 발생하면 `ht_org_samsung.c` 또는 이를 적용한 `ht_org.c`를 기준으로 분석할 수 있다.
+예를 들어 ExampleCo 관련 문제가 발생하면 `ht_org_exampleco.c` 또는 이를 적용한 `ht_org.c`를 기준으로 분석할 수 있다.
 
 ---
 
@@ -263,7 +263,7 @@ ht_org_backup.c
 올바른 예:
 
 ```text
-ht_org_samsung.c
+ht_org_exampleco.c
 ht_org_lg.c
 ht_org_hyundai.c
 ```
@@ -274,10 +274,10 @@ ht_org_hyundai.c
 
 업체명은 가능한 한 일관된 표기 방식을 사용해야 한다.
 
-예를 들어 Samsung을 다음과 같이 여러 방식으로 혼용하면 추적성이 떨어진다.
+예를 들어 ExampleCo을 다음과 같이 여러 방식으로 혼용하면 추적성이 떨어진다.
 
 ```text
-ht_org_samsung.c
+ht_org_exampleco.c
 ht_org_sam.c
 ht_org_ss.c
 ht_org_sec.c
@@ -295,7 +295,7 @@ ht_org_sec.c
 
 ```text
 ht_org.c          → ht_org_static.c
-ht_org_samsung.c → ht_org.c
+ht_org_exampleco.c → ht_org.c
 ```
 
 이를 통해 실제 적용 파일과 기존 기준 파일을 동시에 확인할 수 있다.
