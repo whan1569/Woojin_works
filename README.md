@@ -75,6 +75,8 @@ Physical Device
 | `업무 회고록/` | 업무 방식과 시스템 분석 관점 정리 |
 | `제안/` | 유지보수성·추적성 개선 제안 |
 | `커밋 기록/` | 실제 제품 코드 유지보수 작업 이력 예시 |
+| `개발/IOForge/` | HW/IO 구성 자동화 프로그램의 설계·결함 분석·개발 기록 |
+| `개발/FixMorph/` | 신구형 FIX 구조 변환과 데이터 보존·현장 검증 절차 |
 
 ---
 
@@ -104,6 +106,26 @@ Physical Device
 
 `코드 리펙토링/MHC_InterfaceCyclic관련/`
 
+### Engineering Automation — IOForge
+카드·채널·모션 구성의 반복 입력을 줄이기 위해 로컬 도구를 개발하고, 하나의 프로젝트 모델에서 HW/IO/CSV를 함께 생성하도록 설계했습니다. 이후 발생한 Powerlink 토폴로지, KEB PDO, 구형 설정 호환성 및 B&R Broadcast 누락 문제의 원인과 수정·검증 과정을 분리해 기록했습니다.
+
+- [개발 배경과 개선 효과](개발/IOForge/01_개발_배경과_개선_효과.md)
+- [개발 진행 기록](개발/IOForge/04_개발_진행_기록.md)
+- [2026년 9~10월 후속 개발](개발/IOForge/06_2026년_9~10월_후속_개발.md)
+- [결함 원인 분석과 해결·검증 사례](개발/IOForge/07_결함_원인분석과_해결_검증_사례.md)
+- [설계 의사결정과 품질 확보](개발/IOForge/08_설계_의사결정과_품질확보.md)
+
+### Configuration Migration — FixMorph
+구형 모니터에서 사용하던 설정값을 신형 FIX 구조에 이식하기 위한 데이터 변환 도구입니다. 경로·자료형이 맞는 값만 옮기고 신규 설정과 체크섬·HW 매핑을 보호하는 원칙, 저장 파티션 복구 및 실장비 확인의 역할 분담을 정리했습니다.
+
+- [개발 배경과 문제 정의](개발/FixMorph/01_개발_배경과_문제_정의.md)
+- [변환 원칙](개발/FixMorph/02_적용_기술과_변환_원칙.md)
+- [현장 적용 절차](개발/FixMorph/03_현장_적용과_검증_절차.md)
+- [개발 진행 기록](개발/FixMorph/04_개발_진행_기록.md)
+
+### Recent Engineering Work (2026.08–10)
+[최근 사출기 제어 SW·HW/IO·옵션 표준화 업무 정리](업무%20회고록/261015_사출기_업무_정리.md)에서는 완료한 작업과 원인 미확정·진행 중인 사항을 구분했습니다.
+
 ---
 
 ## Main Technologies
@@ -117,6 +139,9 @@ Physical Device
 - Industrial Communication
 - TRACE / Field Debugging
 - SVN / Configuration Management
+- Python / PySide6 / unittest
+- HW/IO Configuration Generation (XML / CSV)
+- Legacy Data Migration / Regression Testing
 
 ---
 
