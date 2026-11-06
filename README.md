@@ -157,3 +157,9 @@ Physical Device
 **문제를 어떻게 재현하고 → 어느 경계까지 추적하고 → 어떤 기준으로 수정하며 → 실제 장비에서 어떻게 검증했는가**
 
 입니다.
+
+
+### November 2026 — Release Verification & Field Diagnostics
+2026년 11월 첫째 주에는 **wjDebOS Nr.13 테스트센터 실장비·드라이사이클 검증**, 노즐 시퀀스 정체, Clamp Suction Valve 출력 유지, ACOPOS 모터 기동 불가, BMC 금형가열 제어, PLC I/O/제어 파라미터, IOForge 안정화 작업을 정리했습니다.
+
+- [2026-11-02 ~ 11-06 주간 업무 및 7건 개별 기술 기록](업무%20회고록/261106_사출기_주간업무_및_기술검토.md)
